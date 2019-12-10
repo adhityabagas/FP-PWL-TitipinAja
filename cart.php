@@ -1,160 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta charset="utf-8">
+        <title>Cart</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="cart.css">
+        <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous">
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="/assets/css/style.css" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script
+            src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container" style="padding-top: 30px;">
 
+            <label style="color: black; padding-left: 20px;">Product</label>
 
-    <title>Document</title>
-</head>
-<body>
+            <div class="shopping-cart">
 
-<div class="container mb-4" style="margin-top: 100px;">
-    <div class="row">
-        <div class="col-12">
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col"> </th>
-                            <th scope="col">Product</th>
-                            <th scope="col">Price</th>
-                            <th scope="col" class="text-center">Quantity</th>
-                            <th scope="col" class="text-right">Total</th>
-                            <th> </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Dada</td>
-                            <td>Rp 50.000</td>
-                            <td><div class="product-quantity">
-                                <input type="number" value="1" min="1">
-                                </div> </td>
-                            <td class="text-right">Rp 50.000</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Toto</td>
-                            <td>Rp 50.000</td>
-                            <td><div class="product-quantity">
-                                <input type="number" value="1" min="1">
-                                </div> </td>
-                            <td class="text-right">Rp 50.000</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
-                        <tr>
-                            <td><img src="https://dummyimage.com/50x50/55595c/fff" /> </td>
-                            <td>Product Name Titi</td>
-                            <td>Rp 50.000</td>
-                            <td><div class="product-quantity">
-                                <input type="number" value="1" min="1">
-                                </div> </td>
-                            <td class="text-right">Rp 50.000</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>Sub-Total</td>
-                            <td class="text-right">Rp 50.000</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>Shipping</td>
-                            <td class="text-right">Rp 50.000</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td><strong>Total</strong></td>
-                            <td class="text-right"><strong>Rp 50.000</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="col mb-2">
-            <div class="row">
-                <div class="col-sm-12  col-md-6">
-                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                <div class="column-labels" style="margin-bottom: 40px;">
+                    <label class="product-image">Image</label>
+                    <label class="product-details">Product</label>
+                    <label class="product-price">Price</label>
+                    <label class="product-quantity">Quantity</label>
+                    <label class="product-removal">Remove</label>
+                    <label class="product-line-price">Total</label>
                 </div>
-                <div class="col-sm-12 col-md-6 text-right">
-                    <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+
+                <div class="a">
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="img/nike.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">Nike Flex Form TR Women's Sneaker</div>
+                            <p class="product-description">
+                                It has a lightweight, breathable mesh upper with forefoot cables for a
+                                locked-down fit.</p>
+                        </div>
+                        <div class="product-price">12.99</div>
+                        <div class="product-quantity">
+                            <input type="number" value="2" min="1">
+                        </div>
+                        <div class="product-removal">
+                            <button class="remove-product btn btn-sm btn-danger">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="product-line-price">25.98</div>
+                    </div>
+
+                    <div class="product">
+                        <div class="product-image">
+                            <img src="img/nike.jpg">
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">ULTRABOOST UNCAGED SHOES</div>
+                            <p class="product-description">Born from running culture, these men's shoes
+                                deliver the freedom of a cage-free design</p>
+                        </div>
+                        <div class="product-price">45.99</div>
+                        <div class="product-quantity">
+                            <input type="number" value="1" min="1">
+                        </div>
+                        <div class="product-removal">
+                            <button class="remove-product btn btn-sm btn-danger">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </div>
+                        <div class="product-line-price">45.99</div>
+                    </div>
                 </div>
+
+                <div class="totals">
+                    <div class="totals-item">
+                        <label>Subtotal</label>
+                        <div class="totals-value" id="cart-subtotal">71.97</div>
+                    </div>
+                    <div class="totals-item">
+                        <label>Shipping</label>
+                        <div class="totals-value" id="cart-shipping">15.00</div>
+                    </div>
+                    <div class="totals-item totals-item-total">
+                        <label>Grand Total</label>
+                        <div class="totals-value" id="cart-total">90.57</div>
+                    </div>
+                </div>
+
+                <button class="checkout">Checkout</button>
+
             </div>
         </div>
-    </div>
-</div>
+        <script type="text/javascript">
 
-<!-- Footer -->
-<!-- <footer class="text-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-lg-4 col-xl-3">
-                <h5>About</h5>
-                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                <p class="mb-0">
-                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-                </p>
-            </div>
+            $(document).ready(function () {
 
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
-                <h5>Informations</h5>
-                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                <ul class="list-unstyled">
-                    <li><a href="">Link 1</a></li>
-                    <li><a href="">Link 2</a></li>
-                    <li><a href="">Link 3</a></li>
-                    <li><a href="">Link 4</a></li>
-                </ul>
-            </div>
+                /* Set rates + misc */
+                var shippingRate = 15.00;
+                var fadeTime = 300;
 
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
-                <h5>Others links</h5>
-                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                <ul class="list-unstyled">
-                    <li><a href="">Link 1</a></li>
-                    <li><a href="">Link 2</a></li>
-                    <li><a href="">Link 3</a></li>
-                    <li><a href="">Link 4</a></li>
-                </ul>
-            </div>
+                /* Assign actions */
+                $('.product-quantity input').change(function () {
+                    updateQuantity(this);
+                });
 
-            <div class="col-md-4 col-lg-3 col-xl-3">
-                <h5>Contact</h5>
-                <hr class="bg-white mb-2 mt-0 d-inline-block mx-auto w-25">
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-home mr-2"></i> My company</li>
-                    <li><i class="fa fa-envelope mr-2"></i> email@example.com</li>
-                    <li><i class="fa fa-phone mr-2"></i> + 33 12 14 15 16</li>
-                    <li><i class="fa fa-print mr-2"></i> + 33 12 14 15 16</li>
-                </ul>
-            </div>
-            <div class="col-12 copyright mt-3">
-                <p class="float-left">
-                    <a href="#">Back to top</a>
-                </p>
-                <p class="text-right text-muted">created with <i class="fa fa-heart"></i> by <a href="https://t-php.fr/43-theme-ecommerce-bootstrap-4.html"><i>t-php</i></a> | <span>v. 1.0</span></p>
-            </div>
-        </div>
-    </div>
-</footer> -->
-</body>
+                $('.product-removal button').click(function () {
+                    removeItem(this);
+                });
+
+                /* Recalculate cart */
+                function recalculateCart() {
+                    var subtotal = 0;
+
+                    /* Sum up row totals */
+                    $('.product').each(function () {
+                        subtotal += parseFloat($(this).children('.product-line-price').text());
+                    });
+
+                    /* Calculate totals */
+                    var shipping = (
+                        subtotal > 0
+                            ? shippingRate
+                            : 0
+                    );
+                    var total = subtotal + shipping;
+
+                    /* Update totals display */
+                    $('.totals-value').fadeOut(fadeTime, function () {
+                        $('#cart-subtotal').html(subtotal.toFixed(2));
+                        $('#cart-shipping').html(shipping.toFixed(2));
+                        $('#cart-total').html(total.toFixed(2));
+                        if (total == 0) {
+                            $('.checkout').fadeOut(fadeTime);
+                        } else {
+                            $('.checkout').fadeIn(fadeTime);
+                        }
+                        $('.totals-value').fadeIn(fadeTime);
+                    });
+                }
+
+                /* Update quantity */
+                function updateQuantity(quantityInput) {
+                    /* Calculate line price */
+                    var productRow = $(quantityInput)
+                        .parent()
+                        .parent();
+                    var price = parseFloat(productRow.children('.product-price').text());
+                    var quantity = $(quantityInput).val();
+                    var linePrice = price * quantity;
+
+                    /* Update line price display and recalc cart totals */
+                    productRow
+                        .children('.product-line-price')
+                        .each(function () {
+                            $(this).fadeOut(fadeTime, function () {
+                                $(this).text(linePrice.toFixed(2));
+                                recalculateCart();
+                                $(this).fadeIn(fadeTime);
+                            });
+                        });
+                }
+
+                /* Remove item from cart */
+                function removeItem(removeButton) {
+                    /* Remove row from DOM and recalc cart total */
+                    var productRow = $(removeButton)
+                        .parent()
+                        .parent();
+                    productRow.slideUp(fadeTime, function () {
+                        productRow.remove();
+                        recalculateCart();
+                    });
+                }
+
+            });
+        </script>
+    </body>
 </html>
