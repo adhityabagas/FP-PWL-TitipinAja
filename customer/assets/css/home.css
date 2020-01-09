@@ -1,0 +1,13 @@
+/* css */
+
+.bg-banner {
+    background-image: url('../image/banner-traveller-1.jpg');
+}
+
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

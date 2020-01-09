@@ -1,0 +1,60 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* body {
+    background-image: url("london.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.acik-renk-form {
+    width: 1000px;
+    height: 200px;
+    align-content: center;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.center-holder {
+    padding: 10%;
+    text-align: center;
+}
+
+#custom-search-input {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#custom-search-input .search-query {
+    width: 100%;
+    padding-right: 3px;
+    padding-left: 15px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 0;
+}
+
+#custom-search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: absolute;
+    right: 0;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #D9230F;
+    cursor: unset;
+    z-index: 2;
+}
+
+.search-query:focus {
+    z-index: 0;
+}
